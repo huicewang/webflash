@@ -23,3 +23,11 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+// 正常登录
+Cypress.Commands.add('login',(username,password)=>{
+    cy.request({method:'POST',
+            url:'/prod-api/account/login',
+            form:true,
+            body:{username:username,password:password}})
+})
