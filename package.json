@@ -9,6 +9,7 @@
   "author": "huice",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^6.3.0"
+    "cypress": "^6.3.0",
+    "faker": "^5.1.0"
   }
 }

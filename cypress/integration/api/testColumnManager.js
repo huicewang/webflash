@@ -2,7 +2,7 @@ import faker from 'faker'
 
 faker.setLocale('zh_CN')
 
-describe('添加栏目',()=>{
+describe('添加栏目接口测试',()=>{
     it('栏目数据合法，添加成功',()=>{
         cy.login('developer', 'developer').then(res=>{
             cy.request({method: 'POST',
@@ -23,7 +23,7 @@ describe('添加栏目',()=>{
         })
     })
 
-      it('栏目名称不为空，编码为空，提示400错误和编码不能为空',()=>{
+    it('栏目名称不为空，编码为空，提示400错误和编码不能为空',()=>{
         cy.login('developer', 'developer').then(res=>{
             cy.request({method: 'POST',
                 url: '/prod-api/channel?id=&name='+faker.name.firstName()+faker.name.lastName()+'&code=',

@@ -31,3 +31,9 @@ Cypress.Commands.add('login',(username,password)=>{
             form:true,
             body:{username:username,password:password}})
 })
+
+Cypress.Commands.add('loginweb',(username,password)=>{
+    cy.get('input[type=text]').type(username)
+    cy.get('input[type=password]').type(password)
+    cy.get('button[type=button]').click()
+})
