@@ -1,0 +1,6 @@
+{
+  "banner": {
+    "bannermanager": "a[href='#/banner']",
+    "addbutton": ":nth-child(3) > .el-col > .el-button--success"
+  }
+}
